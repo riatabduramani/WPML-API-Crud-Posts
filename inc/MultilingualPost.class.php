@@ -72,7 +72,7 @@ class MultilingualPost {
 		
 	}
 
-	public function updatee(WP_REST_Request $request) {
+	public function update(WP_REST_Request $request) {
 		//Get id of the post
 		$postid = $request->get_url_params();
 
@@ -82,14 +82,8 @@ class MultilingualPost {
 			$my_post[$key] = "$value";
 		}
 
-		 return apply_filters( 'wpml_object_id', $postid, 'post', TRUE);
+		 return true;
 		 
-	}
-
-	public function update() {
-			    
-
-			    return $languages[1];
 	}
 
 	public function delete(WP_REST_Request $request) {
